@@ -1,7 +1,7 @@
 {
-  "name": "tr-104",
-  "version": "1.2.0",
-  "description": "Html Cleanup, Javascript Obfuscation,Live Reload, CSS file management",
+  "name": "tr-105",
+  "version": "1.0.0",
+  "description": "Html Cleanup, Javascript Obfuscation,Live Reload, CSS file management, Image compression",
   "main": "gulpfile.js",
   "private": true,
   "directories": {
