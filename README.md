@@ -8,29 +8,29 @@ tr-105/
 
 |- dev/
 
-  |- index.html
+      |- index.html
 
-  |- js/
+      |- js/
 
-    |- main.js
+        |- main.js
 
-    |- jquery-3.3.1.min.js
+        |- jquery-3.3.1.min.js
 
-  |- css/
+      |- css/
 
-      |- main.css
+          |- main.css
 
-      |- reset.css
+          |- reset.css
 
-      |- styles.css
+          |- styles.css
 
-  |- img/    
-  
-      |- 1.jpg
+      |- img/    
 
-      |- 2.jpg
+          |- 1.jpg
 
-      |- 3.gif
+          |- 2.jpg
+
+          |- 3.gif
 
 gulpfile.js
 
