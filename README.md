@@ -24,6 +24,7 @@ tr-105/
       |- styles.css
 
   |- img/    
+  
       |- 1.jpg
 
       |- 2.jpg
