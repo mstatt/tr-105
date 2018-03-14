@@ -205,7 +205,7 @@ gulp.task('posttest', function () {
 
 //Post-obfuscation remove current js file to avoid conflict
 gulp.task('postflight', function () {
-    return gulp.src([TEST_PATH, {read: false})
+    return gulp.src(TEST_PATH, {read: false})
         .pipe(clean());
 });
 //-----------------------------------Utility tasks-------------------------------------//
