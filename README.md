@@ -77,14 +77,6 @@ Here are all of the commands to run(once Node is installed):
 --Open the dev/img directory and view the large (file size) images (.png or .jpg).
 
 **********************Run the following command in the terminal***************
->>gulp cleancss
-
---Open the dev/css/main.css file in an editor.
-
---Notice all styles are gone that have no reference in index.html.
-
-
-**********************Run the following command in the terminal***************
 
 >>gulp watch
 
