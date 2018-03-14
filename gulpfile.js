@@ -99,12 +99,6 @@ gulp.task('obfuscate',function (){
 });
 
 
-//Post-obfuscation remove current js file to avoid conflict
-gulp.task('postflight', function () {
-    return gulp.src([TEST_PATH,DEV_PATH + '/js/obf'], {read: false})
-        .pipe(clean());
-});
-
 //-----------------------------------JavaScript manipulation tasks-------------------------------------//
 
 
@@ -152,19 +146,6 @@ gulp.task('imagecomp', function() {
 //-----------------------------------Image manipulation tasks-------------------------------------//
 
 //-----------------------------------Directory building and manipulation tasks-------------------------------------//
-//Clean Test Directories
-gulp.task('cleantest', function () {
-  console.log('Cleaning Up files and directories');
-    return gulp.src(TEST_PATH, {read: false})
-        .pipe(clean());
-});
-
-//Clean Prod Directories
-gulp.task('cleanprod', function () {
-  console.log('Cleaning Up files and directories');
-    return gulp.src(PROD_PATH, {read: false})
-        .pipe(clean());
-});
 
 //Build the test directory structure and files
 gulp.task('buildtest', function() {
@@ -197,15 +178,34 @@ gulp.task("bump", function () {
 //publishtest
 gulp.task('stagetest',function (){
 console.log('Starting to Publish test files..............');
-runSequence('cleanprod','cleantest','scriptswork','buildtest','indexcleanup','pre-obfuscation','obfuscate','imagecomp','bump');
+runSequence('preflight','cleancss','scriptswork','buildtest','indexcleanup','pre-obfuscation','obfuscate','imagecomp','posttest','bump');
 console.log('Completed publishing test files..............');
 });
 
 //Stage files from test to prod and delete test dir
 gulp.task('stageprod',function (){
 console.log('Starting to Publish production files..............');
-runSequence('cleanprod','buildprod','postflight');
+runSequence('buildprod','postflight');
 console.log('Completed publishing production files..............');
 });
 
+//Pre-flight house keeping
+gulp.task('preflight', function () {
+    return gulp.src([TEST_PATH,PROD_PATH], {read: false})
+        .pipe(clean());
+});
+
+
+//Post Stageing Test, remove current js file to avoid conflict
+gulp.task('posttest', function () {
+    return gulp.src(DEV_PATH + '/js/obf', {read: false})
+        .pipe(clean());
+});
+
+
+//Post-obfuscation remove current js file to avoid conflict
+gulp.task('postflight', function () {
+    return gulp.src([TEST_PATH, {read: false})
+        .pipe(clean());
+});
 //-----------------------------------Utility tasks-------------------------------------//
