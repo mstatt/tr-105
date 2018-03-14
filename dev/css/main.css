@@ -11,9 +11,9 @@ body {
 img {
 	margin-bottom: 3rem;
 	height: 450px;
-    width: 450px;
+        width: 450px;
 	position:relative;
-    display: inline-block;
+        display: inline-block;
 }
 
 h1, p {
