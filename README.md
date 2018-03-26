@@ -45,6 +45,8 @@ server.js
 
 *** ">>" means run this from the command terminal without the ">>" ***
 
+*** Note: If you have Malwarebytes installed it will conflict with running NPM***
+
 # Some introduction
 Install NODE.JS:
 -- Install Node:
