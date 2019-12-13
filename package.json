@@ -12,9 +12,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "author": "",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.11"
   }
+=======
+  "author": "Michael J. Stattelman",
+  "license": "ISC"
+>>>>>>> f6521d9715a9c926c3a027d6cce3916df84a867e
 }
